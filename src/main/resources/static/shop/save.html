@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"
+            media="screen,projection" />
+
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>YPAHH - Your product are here haa!</title>
+</head>
+
+<body class="grey lighten-3">
+<a class="waves-effect waves-light btn" href="/index.html">Menu</a>
+      <div id="formularioEdicao" class="container">
+            <h3 class="main-title center">Cadastrar Empresa</h3>
+            <div class="row center">
+                  <form class="col s12">
+                        <div class="section">
+                              <div class="row">
+                                    <div class="input-field col s12">
+                                          <input placeholder="Nome da empresa" id="name" type="text" class="validate" autocomplete="on">
+                                          <label for="name">Nome</label>
+                                    </div>
+                              </div>
+                              <div class="row">
+                                    <div class="input-field col s12">
+                                          <input placeholder="Descrição da atividade da empresa" id="description" type="text" class="validate" autocomplete="on"/>
+                                          <label for="description">Descrição *</label>
+                                    </div>
+                              </div>
+                              <div class="row">
+                                    <div class="input-field col s12">
+                                          <i class="material-icons prefix">phone</i>
+                                          <input placeholder="Telefone para contato" id="telephone" type="tel" class="validate" autocomplete="on"/>
+                                          <label for="telephone">Telefone *
+                                          </label>
+                                    </div>
+                              </div>
+                              <div class="row">
+                                    <div class="input-field col s12">
+                                          <i class="material-icons prefix">phone</i>
+                                          <input placeholder="Whatsup para contato" id="whatsup" type="text" class="validate" autocomplete="on"/>
+                                          <label for="whatsup">Whatsup</label>
+                                    </div>
+                              </div>
+                               <div class="row">
+                                    <div class="input-field col s12">
+                                          <i class="material-icons prefix">mail</i>
+                                          <input placeholder="Email para contato" id="email" type="text" class="validate" autocomplete="on"/>
+                                          <label for="email">Email</label>
+                                    </div>
+                              </div>
+                              <div class="row">
+                                    <div class="input-field col s12">
+                                          <i class="material-icons prefix">alarm</i>
+                                          <input placeholder="Horario que a empresa abre" id="openTime" type="text" class="validate timepicker" autocomplete="on"/>
+                                          <label for="openTime">Abre as</label>
+                                    </div>
+                              </div>
+                              <div class="row">
+                                    <div class="input-field col s12">
+                                          <i class="material-icons prefix">alarm</i>
+                                          <input placeholder="Horario que a empresa fecha" id="closeTime" type="text" class="timepicker validate" autocomplete="on"/>
+                                          <label for="closeTime">Fecha as</label>
+                                    </div>
+                              </div>
+                              <div class="row">
+                                    <div class="input-field col s12">
+                                          <i class="material-icons prefix">map</i>
+                                          <input placeholder="Endereço da empresa" id="addressShop" type="text" class="validate" />
+                                          <label for="addressShop">Endereço *</label>
+                                    </div>
+                              </div>
+                              <!-- Fim SECTION Dados Basicos -->
+                              <div class="row">
+                                    <div class="input-field col s12 center">
+                                          <button id=save class="btn waves-effect waves-light" type="button">Salvar</button>
+                                    </div>
+                              </div>
+                        </div>
+                  </form>
+            </div>
+      </div>
+
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+      <script type="text/javascript" src="../js/shop/save.js"></script>
+
+</body>
+
+</html>

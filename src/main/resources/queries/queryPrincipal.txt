@@ -1,0 +1,49 @@
+db.getCollection('shop').aggregate([
+{
+        $geoNear: {
+                near:{
+                        coordinates: [-23.182774, -45.885762],
+                        type: "Point"
+                },
+                distanceField: "distancia",
+                spherical: true,
+                num: 4,
+                maxDistance: 100
+        }
+},
+{ 
+	$sort: 
+	{
+		'name':1
+	}
+},
+{
+    $match : 
+    {
+        'products.name' : {$regex:'Body'}
+        
+    }
+},
+{
+  $unwind:
+    {
+      path: '$products'
+    }
+},
+{
+    $match : 
+    {
+        'products.name' : {$regex:'Body'}
+        
+    }
+},
+{
+    $group:{
+        _id:'$_id',
+        'name':{$first:'$name'},
+        'description':{$first:'$description'},
+        'description':{$first:'$description'},
+        'contact':{$first:'$contact'},
+        'products':{$push:{'code':'$products.code','name':'$products.name','description':'$products.description'}}
+    }
+}])

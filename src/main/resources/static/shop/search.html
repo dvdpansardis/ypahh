@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"
+	media="screen,projection" />
+
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+
+	<link href="../css/main.css" rel="stylesheet">
+
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>YPAHH - Your product are here haa!</title>
+</head>
+
+<body class="grey lighten-3">
+<a class="waves-effect waves-light btn" href="/index.html">Menu</a>
+	<h3 class="main-title center">Pesquisa por Produtos Proximos</h3>
+	<div class="row center">
+		<form class="col s12">
+			<div class="section">
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="product" type="text" class="validate" autocomplete="on">
+							<label for="product">Produto</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<label for="range">Distancia em Metros</label>
+						<p class="range-field">
+							<input type="range" id="distance" min="10" max="1000" />
+						</p>
+					</div>
+				</div>
+				<!-- Fim SECTION Dados Basicos -->
+				<div class="row">
+					<div class="input-field col s12 center">
+						<button id='search' class="btn waves-effect waves-light"
+							type="button">Pesquisar</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s8">
+						<div id="map" class="mapa"></div>
+					</div>
+					<div class="col s4">
+						<div id="listsProducts">
+							<h3 class="main-title center">Lista de Lojas</h3>
+							<div class="container">
+								<table id="shops" class="striped responsive-table">
+									<thead>
+										<tr>
+											<th style="text-align: center;">Nome</th>
+											<th style="text-align: center;">Descrição</th>
+											<th style="text-align: center;">Quantidade de Produtos com esta descrição</th>
+											<th style="text-align: center;">Imagem do primeiro Produto</th>
+										</tr>
+									</thead>
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<script type="text/javascript"
+		src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<script type="text/javascript" src="../js/shop/search.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUmHkeCKoJyirlqfHTkexfz3q1kcZzv7c&amp;callback=initMap"></script>
+	<script type="text/javascript" src="../js/shop/initMap.js"></script>
+</body>
+
+</html>
