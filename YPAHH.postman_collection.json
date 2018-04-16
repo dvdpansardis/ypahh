@@ -1,0 +1,175 @@
+{
+	"info": {
+		"name": "YPAHH",
+		"_postman_id": "81365396-bde9-6603-86aa-62fbff8a5e77",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Shops",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{base}}/shops",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"shops"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "Save Shop Full",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"Torra Torra\",\n        \"description\": \"Loja de roupas\",\n        \"localization\": {\n            \"address\": \"R. Sete de Setembro, 211 - Centro, São José dos Campos - SP, 12210-260\",\n            \"location\": {\n                \"x\": -23.183181,\n                \"y\": -45.885734,\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    -23.183181,\n                    -45.885734\n                ]\n            }\n        },\n        \"contact\": {\n            \"telephone\": \"(12) 3947-9999\",\n            \"whatsup\": \"(12) 91111-2222\",\n            \"email\": \"test@test.com\",\n            \"openTime\": \"8:00\",\n            \"closeTime\": \"20:00\"\n        },\n        \"products\": [\n            {\n                \"code\": \"123\",\n                \"name\": \"Camisa Body Builder\",\n                \"description\": \"Camisa para quem gosta de academia\"\n            }\n        ]\n    }"
+				},
+				"url": {
+					"raw": "{{base}}/shops",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"shops"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products One Shop",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{base}}/shops/5a91bc1e80ae91298c78b3a2/products",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"shops",
+						"5a91bc1e80ae91298c78b3a2",
+						"products"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Save Shop",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n    {\n        \"name\": \"test2\",\n        \"description\": \"test2\",\n        \"localization\": {\n        \t\"address\":\"Av. Dr. Eduardo Cury, 200\"\n        },\n        \"contact\": {\n            \"telephone\": null,\n            \"whatsup\": null,\n            \"email\": null,\n            \"openTime\": \"18:00\",\n            \"closeTime\": \"08:00\"\n        }\n    }\n"
+				},
+				"url": {
+					"raw": "{{base}}/shops",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"shops"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products by Nearest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{base}}/shops/nearWithProduct?productName=calça&lat=-23.183921&lon=-45.885471&distanceKm=0.5",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"shops",
+						"nearWithProduct"
+					],
+					"query": [
+						{
+							"key": "productName",
+							"value": "calça",
+							"equals": true
+						},
+						{
+							"key": "lat",
+							"value": "-23.183921",
+							"equals": true
+						},
+						{
+							"key": "lon",
+							"value": "-45.885471",
+							"equals": true
+						},
+						{
+							"key": "distanceKm",
+							"value": "0.5",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add List Products To A Shop",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n\t{\r\n\t    \"code\" : \"777\",\r\n\t    \"name\" : \"Placa de Vídeo Strix\",\r\n\t    \"description\" : \"Placa para Gamers\",\r\n\t    \"images\":[]\r\n\t}\r\n]"
+				},
+				"url": {
+					"raw": "{{base}}/shops/5a91bc1e80ae91298c78b3a2/products",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"shops",
+						"5a91bc1e80ae91298c78b3a2",
+						"products"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
